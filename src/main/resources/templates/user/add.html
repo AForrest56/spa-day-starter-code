@@ -20,6 +20,7 @@
             <input type="email" name="email">
         </label>
         <input type="submit" value="Submit">
+        <p th:text="${error}" th:if="${error != null}"></p>
     </form>
 
 </body>

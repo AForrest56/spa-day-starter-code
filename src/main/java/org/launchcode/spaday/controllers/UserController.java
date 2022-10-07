@@ -24,6 +24,9 @@ public class UserController {
         if(user.getPassword().equals(verify)) {
             return "user/index";
         } else {
+            model.addAttribute("error", "Incorrect Password");
+            model.addAttribute("username", user.getUsername());
+            model.addAttribute("email", user.getEmail());
             return "user/add";
         }
 
